@@ -176,7 +176,7 @@ checkoutForm.addEventListener('submit', e => {
   // Buat pesan WA URL encoded
   const whatsappMessage = encodeURIComponent(orderSummary);
   // Nomor WA tujuan, ganti dengan nomor tujuan aslimu, contoh: 6281234567890 (Indonesia)
-  const waNumber = '085162660106';
+  const waNumber = '+6285162660106';
   const waURL = `https://wa.me/${waNumber}?text=${whatsappMessage}`;
 
 
