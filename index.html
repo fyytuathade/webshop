@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toko Baju Modern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Stone Island</div>
+            <div class="menu-toggle" aria-label="Menu">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#landing">Beranda</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="landing" aria-label="Landing Page">
+        <h1>Selamat Datang di Stone Island</h1>
+        <p>Temukan koleksi pakaian stylish dan nyaman untuk semua kesempatan. Belanja mudah dan pesan online sekarang!
+        </p>
+        <button class="btn-primary"
+            onclick="document.getElementById('marketplace').scrollIntoView({behavior:'smooth'})">Belanja
+            Sekarang</button>
+    </section>
+
+    <section id="marketplace" aria-label="Marketplace">
+        <h2>Marketplace</h2>
+        <div class="products-grid" id="products-grid">
+        </div>
+    </section>
+
+    <section id="about" aria-label="About Us">
+        <h2>Tentang Kami</h2>
+        <p>Stone Island adalah destinasi terbaik untuk pakaian dengan desain terkini dan kualitas terbaik. Kami percaya
+            setiap orang berhak tampil percaya diri dan nyaman dengan pakaian yang mereka kenakan. Belanja online di
+            toko kami sangat mudah dan cepat, didukung dengan pelayanan pelanggan yang profesional. Terima kasih telah
+            mempercayai kami sebagai tempat berbelanja pakaian Anda.</p>
+    </section>
+
+    <button id="cart-btn" aria-label="Buka Keranjang Belanja">&#128717;</button>
+
+    <aside id="cart-sidebar" aria-label="Keranjang Belanja">
+        <h3>Keranjang Belanja</h3>
+        <div id="cart-items">
+            <p>Keranjang kosong.</p>
+        </div>
+        <div id="cart-footer">
+            <div id="cart-total">Total: Rp 0</div>
+            <button id="checkout-btn" disabled>Checkout</button>
+        </div>
+    </aside>
+
+    <div id="modal-overlay" aria-hidden="true">
+        <div id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+            <button id="modal-close" aria-label="Tutup Formulir Checkout">&times;</button>
+            <h3 id="checkout-title">Formulir Pemesanan</h3>
+            <form id="checkout-form">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+
+                <label for="address">Alamat Pengiriman</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <button type="submit" id="checkout-submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
